@@ -33,19 +33,49 @@ The file follows the following format:
 See the file script for an example of the file format
 """
 def parse_file( fname, points, transform, screen, color ):
-    matrix = new_matrix
     f = open(fname, 'rU')
     lines = f.read().split('\n')
     i = 0
     while i<len(lines):
         if (lines[i]=="line"):
             args = lines[i+1].split(" ")
-            add_edge(matrix, args[0], args[1], args[2], args[3], args[4], args[5])
+            add_edge(points, int(args[0]), int(args[1]), int(args[2]), int(args[3]), int(args[4]), int(args[5]))
             i+=2
-        else if (lines[i]=="ident"):
-            ident(matrix)
+        elif (lines[i]=="ident"):
+            ident(points)
             i+=1
-        else if (lines[i]=="scale"):
+        elif (lines[i]=="scale"):
             args = lines[i+1].split(" ")
-            transform = make_scale(args[0], args[1], args[2])
+            transform = make_scale(int(args[0]), int(args[1]), int(args[2]))
             i+=2
+        elif (lines[i]=="translate"):
+            args = lines[i+1].split(" ")
+            transform = make_translate(int(args[0]), int(args[1]), int(args[2]))
+            matrix_mult(transform, points)
+            i+=2
+        elif (lines[i]=="rotate"):
+            args = lines[i+1].split(" ")
+            if (args[0]=="x"):
+                transform = make_rotX(int(args[1]))
+            elif (args[0]=="y"):
+                transform = make_rotY(int(args[1]))
+            else:
+                transform = make_rotZ(int(args[1]))
+            matrix_mult(transform, points)
+            i+=2
+        elif (lines[i]=="apply"):
+            matrix_mult(transform, points)
+            i+=1
+        elif (lines[i]=="display"):
+            clear_screen(screen)
+            draw_lines(points, screen, color)
+            display(screen)
+            i+=1
+        elif (lines[i]=="save"):
+            args = lines[i+1].split(" ")
+            clear_screen(screen)
+            draw_lines(points, screen, color)
+            save_extension(screen, args[0])
+            i+=2
+        elif (lines[i]=="quit"):
+            i=len(lines)
