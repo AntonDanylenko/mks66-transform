@@ -35,8 +35,10 @@ See the file script for an example of the file format
 def parse_file( fname, points, transform, screen, color ):
     f = open(fname, 'rU')
     lines = f.read().split('\n')
+    f.close()
     i = 0
     while i<len(lines):
+        print("len(lines): " + str(len(lines)))
         print("line: " + str(i))
         if (lines[i]=="line"):
             args = lines[i+1].split(" ")
