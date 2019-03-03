@@ -37,6 +37,7 @@ def parse_file( fname, points, transform, screen, color ):
     lines = f.read().split('\n')
     i = 0
     while i<len(lines):
+        print("line: " + str(i))
         if (lines[i]=="line"):
             args = lines[i+1].split(" ")
             add_edge(points, int(args[0]), int(args[1]), int(args[2]), int(args[3]), int(args[4]), int(args[5]))
