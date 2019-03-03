@@ -29,30 +29,30 @@ def make_rotX( theta ):
     matrix = new_matrix()
     radians = theta / 180 * math.pi
     ident(matrix)
-    matrix[1][1] = math.cos(theta)
-    matrix[1][2] = 0-math.sin(theta)
-    matrix[2][1] = math.sin(theta)
-    matrix[2][2] = math.cos(theta)
+    matrix[1][1] = math.cos(radians)
+    matrix[1][2] = 0-math.sin(radians)
+    matrix[2][1] = math.sin(radians)
+    matrix[2][2] = math.cos(radians)
     return matrix
 
 def make_rotY( theta ):
     matrix = new_matrix()
     radians = theta / 180 * math.pi
     ident(matrix)
-    matrix[0][0] = math.cos(theta)
-    matrix[0][2] = math.sin(theta)
-    matrix[2][0] = 0-math.sin(theta)
-    matrix[2][2] = math.cos(theta)
+    matrix[0][0] = math.cos(radians)
+    matrix[0][2] = math.sin(radians)
+    matrix[2][0] = 0-math.sin(radians)
+    matrix[2][2] = math.cos(radians)
     return matrix
 
 def make_rotZ( theta ):
     matrix = new_matrix()
     radians = theta / 180 * math.pi
     ident(matrix)
-    matrix[0][0] = math.cos(theta)
-    matrix[0][1] = 0-math.sin(theta)
-    matrix[1][0] = math.sin(theta)
-    matrix[1][1] = math.cos(theta)
+    matrix[0][0] = math.cos(radians)
+    matrix[0][1] = 0-math.sin(radians)
+    matrix[1][0] = math.sin(radians)
+    matrix[1][1] = math.cos(radians)
     return matrix
 
 #print the matrix such that it looks like
