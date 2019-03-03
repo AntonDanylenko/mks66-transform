@@ -82,3 +82,5 @@ def parse_file( fname, points, transform, screen, color ):
             i+=2
         elif (lines[i]=="quit"):
             i=len(lines)
+        else:
+            i+=1
