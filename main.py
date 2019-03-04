@@ -10,8 +10,8 @@ transform = new_matrix()
 
 #parse_file( 'script', edges, transform, screen, color )
 
-screen2 = new_screen(background=[184,149,75])
-color2 = [255,255,255]
+screen2 = new_screen( background = [184,149,75])
+color2 = [0,0,0]
 matrix = new_matrix()
 transform2 = new_matrix()
 
