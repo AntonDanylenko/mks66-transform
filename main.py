@@ -11,7 +11,7 @@ transform = new_matrix()
 #parse_file( 'script', edges, transform, screen, color )
 
 screen2 = new_screen()
-color3 = [0,0,0]
+color2 = [255, 203, 76]
 matrix = new_matrix()
 transform2 = new_matrix()
 
@@ -24,4 +24,4 @@ add_multi(matrix, "85,88 92,118 110,143 136,169 144,187 145,207 140,224 140,236 
 #add_multi(matrix, "", 512)
 #print_matrix(matrix)
 
-parse_file('script2', matrix, transform2, screen2, color3)
+parse_file('script2', matrix, transform2, screen2, color2)
