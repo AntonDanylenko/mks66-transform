@@ -46,6 +46,10 @@ def parse_file( fname, points, transform, screen, color ):
             args = lines[i+1].split(" ")
             add_edge(points, int(args[0]), int(args[1]), int(args[2]), int(args[3]), int(args[4]), int(args[5]))
             i+=2
+        elif (lines[i]=="color"):
+            args = lines[i+1].split(" ")
+            color = [args[0], args[1], args[2]]
+            i+=2
         elif (lines[i]=="ident"):
             ident(transform)
             i+=1
