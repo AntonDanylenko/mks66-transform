@@ -44,7 +44,19 @@ translate
 apply
 ident
 translate
-200 350 0
+200 349 0
+apply
+display
+
+ident
+translate
+159 0 0
+apply
+display
+
+ident
+translate
+-22 0 0
 apply
 display
 
