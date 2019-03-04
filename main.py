@@ -10,9 +10,7 @@ transform = new_matrix()
 
 #parse_file( 'script', edges, transform, screen, color )
 
-del DEFAULT_COLOR
-DEFAULT_COLOR = [184,149,75]
-screen2 = new_screen( )
+screen2 = new_screen()
 color3 = [0,0,0]
 matrix = new_matrix()
 transform2 = new_matrix()
