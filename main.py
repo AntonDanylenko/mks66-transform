@@ -10,7 +10,8 @@ transform = new_matrix()
 
 #parse_file( 'script', edges, transform, screen, color )
 
-global DEFAULT_COLOR = [184,149,75]
+global DEFAULT_COLOR
+DEFAULT_COLOR = [184,149,75]
 screen2 = new_screen( )
 color3 = [0,0,0]
 matrix = new_matrix()
