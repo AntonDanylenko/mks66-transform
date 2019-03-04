@@ -6,17 +6,17 @@ scale
 apply
 ident
 translate
-185 339 0
+181 335 0
 apply
 display
 
 ident
 translate
--185 -339 0
+-181 -335 0
 apply
 ident
 translate
-346 325 0
+342 321 0
 apply
 display
 
