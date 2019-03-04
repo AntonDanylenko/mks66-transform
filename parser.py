@@ -76,15 +76,15 @@ def parse_file( fname, points, transform, screen, color ):
                     points[col][row] = int(points[col][row])
             i+=1
         elif (lines[i]=="display"):
-            print_matrix(points)
-            clear_screen(screen)
+            #print_matrix(points)
+            #clear_screen(screen)
             draw_lines(points, screen, color)
             display(screen)
             i+=1
         elif (lines[i]=="save"):
             #print("args: " + lines[i+1])
             args = lines[i+1].split(" ")
-            clear_screen(screen)
+            #clear_screen(screen)
             draw_lines(points, screen, color)
             save_extension(screen, args[0])
             i+=2
