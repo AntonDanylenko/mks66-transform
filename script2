@@ -1,3 +1,24 @@
 display
+
+ident
+scale
+0.2 0.2 0.2
+apply
+ident
+translate
+185 339 0
+apply
+display
+
+ident
+translate
+-185 -339 0
+apply
+ident
+translate
+346 325 0
+apply
+display
+
 save
 drawing.png
