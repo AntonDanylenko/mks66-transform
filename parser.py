@@ -71,9 +71,9 @@ def parse_file( fname, points, transform, screen, color ):
             i+=2
         elif (lines[i]=="apply"):
             matrix_mult(transform, points)
-            for row in points:
-                for point in row:
-                    point = int(point)
+            for col in range(len(points)):
+                for row in range(len(points[0])):
+                    points[col][row] = int(points[col][row])
             i+=1
         elif (lines[i]=="display"):
             print_matrix(points)
