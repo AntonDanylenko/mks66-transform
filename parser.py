@@ -52,24 +52,22 @@ def parse_file( fname, points, transform, screen, color ):
         elif (lines[i]=="scale"):
             print("args: " + lines[i+1])
             args = lines[i+1].split(" ")
-            transform = make_scale(int(args[0]), int(args[1]), int(args[2]))
+            matrix_mult(make_scale(int(args[0]), int(args[1]), int(args[2])), transform)
             i+=2
         elif (lines[i]=="translate"):
             print("args: " + lines[i+1])
             args = lines[i+1].split(" ")
-            transform = make_translate(int(args[0]), int(args[1]), int(args[2]))
-            matrix_mult(transform, points)
+            matrix_mult(make_translate(int(args[0]), int(args[1]), int(args[2])), transform)
             i+=2
         elif (lines[i]=="rotate"):
             print("args: " + lines[i+1])
             args = lines[i+1].split(" ")
             if (args[0]=="x"):
-                transform = make_rotX(int(args[1]))
+                matrix_mult(make_rotX(int(args[1])), transform)
             elif (args[0]=="y"):
-                transform = make_rotY(int(args[1]))
+                matrix_mult(make_rotY(int(args[1])), transform)
             else:
-                transform = make_rotZ(int(args[1]))
-            matrix_mult(transform, points)
+                matrix_mult(make_rotZ(int(args[1])), transform)
             i+=2
         elif (lines[i]=="apply"):
             matrix_mult(transform, points)
