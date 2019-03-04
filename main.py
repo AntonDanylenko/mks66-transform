@@ -10,8 +10,9 @@ transform = new_matrix()
 
 #parse_file( 'script', edges, transform, screen, color )
 
-screen2 = new_screen( background = [184,149,75])
-color2 = [0,0,0]
+color2 = [184,149,75]
+screen2 = new_screen( background_col = color2)
+color3 = [0,0,0]
 matrix = new_matrix()
 transform2 = new_matrix()
 
@@ -24,4 +25,4 @@ add_multi(matrix, "233,513 247,514 259,519 269,532 272,552 268,563 259,569 248,5
 add_multi(matrix, "451,466 470,468 490,473 503,487 509,499 494,520 474,530 463,532 456,524 451,511 447,498 446,488 449,477 452,467 437,469 427,475 419,486 420,496 425,511 436,522 447,529 463,532", 900)
 #print_matrix(matrix)
 
-parse_file('script2', matrix, transform2, screen2, color2)
+parse_file('script2', matrix, transform2, screen2, color3)

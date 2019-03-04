@@ -11,13 +11,13 @@ BLUE = 2
 
 DEFAULT_COLOR = [0, 0, 0]
 
-def new_screen( width = XRES, height = YRES, background = DEFAULT_COLOR):
+def new_screen( width = XRES, height = YRES, background_col = DEFAULT_COLOR):
     screen = []
     for y in range( height ):
         row = []
         screen.append( row )
         for x in range( width ):
-            screen[y].append( background[:] )
+            screen[y].append( background_col[:] )
     return screen
 
 def plot( screen, color, x, y ):
