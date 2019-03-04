@@ -1,22 +1,26 @@
 display
 
 ident
+translate
+-250 -250 0
+apply
+ident
 scale
 0.2 0.2 0.2
 apply
 ident
 translate
-157 314 0
+186 339 0
 apply
 display
 
 ident
 translate
--157 -314 0
+-186 -339 0
 apply
 ident
 translate
-318 302 0
+345 326 0
 apply
 display
 
