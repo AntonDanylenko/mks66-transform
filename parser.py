@@ -57,8 +57,8 @@ def parse_file( fname, points, transform, screen, color ):
         elif (lines[i]=="translate"):
             #print("args: " + lines[i+1])
             args = lines[i+1].split(" ")
-            print("args[0]: " + str(int(args[0])))
-            print_matrix(transform)
+            #print("args[0]: " + str(int(args[0])))
+            #print_matrix(transform)
             matrix_mult(make_translate(int(args[0]), int(args[1]), int(args[2])), transform)
             i+=2
         elif (lines[i]=="rotate"):
