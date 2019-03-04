@@ -78,7 +78,7 @@ def parse_file( fname, points, transform, screen, color ):
                     points[col][row] = int(points[col][row])
             i+=1
         elif (lines[i]=="display"):
-            print_matrix(points)
+            #print_matrix(points)
             #clear_screen(screen)
             draw_lines(points, screen, color)
             display(screen)
