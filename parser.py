@@ -73,6 +73,7 @@ def parse_file( fname, points, transform, screen, color ):
             matrix_mult(transform, points)
             i+=1
         elif (lines[i]=="display"):
+            print_matrix(points)
             clear_screen(screen)
             draw_lines(points, screen, color)
             display(screen)
