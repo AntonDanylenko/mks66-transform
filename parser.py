@@ -81,7 +81,6 @@ def parse_file( fname, points, transform, screen, color ):
             #print_matrix(points)
             #clear_screen(screen)
             draw_lines(points, screen, color)
-            color[1]+=15
             display(screen)
             i+=1
         elif (lines[i]=="save"):
