@@ -61,7 +61,13 @@ def print_matrix( matrix ):
     s = ''
     for r in range( len( matrix[0] ) ):
         for c in range( len(matrix) ):
-            s+= str(matrix[c][r]) + ' '
+            s+= str(matrix[c][r])
+            if (matrix[c][r]<10):
+                s+="   "
+            elif (matrix[c][r]<100):
+                s+="  "
+            else:
+                s+=" "
         s+= '\n'
     print s
 
