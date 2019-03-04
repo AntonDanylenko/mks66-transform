@@ -3,5 +3,105 @@ translate
 -63 0 0
 apply
 display
+ident
+scale
+0.9 0.9 0.9
+apply
+ident
+translate
+63 0 0
+apply
+display
+
+ident
+translate
+-63 0 0
+apply
+display
+ident
+scale
+0.9 0.9 0.9
+apply
+ident
+translate
+63 0 0
+apply
+display
+
+ident
+translate
+-63 0 0
+apply
+display
+ident
+scale
+0.9 0.9 0.9
+apply
+ident
+translate
+63 0 0
+apply
+display
+
+ident
+translate
+-63 0 0
+apply
+display
+ident
+scale
+0.9 0.9 0.9
+apply
+ident
+translate
+63 0 0
+apply
+display
+
+ident
+translate
+-63 0 0
+apply
+display
+ident
+scale
+0.9 0.9 0.9
+apply
+ident
+translate
+63 0 0
+apply
+display
+
+ident
+translate
+-63 0 0
+apply
+display
+ident
+scale
+0.9 0.9 0.9
+apply
+ident
+translate
+63 0 0
+apply
+display
+
+ident
+translate
+-63 0 0
+apply
+display
+ident
+scale
+0.9 0.9 0.9
+apply
+ident
+translate
+63 0 0
+apply
+display
+
 save
 drawing.png
