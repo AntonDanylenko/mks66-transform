@@ -13,7 +13,7 @@ DEFAULT_COLOR = [184,149,75]
 
 def new_screen( width = XRES, height = YRES):
     screen = []
-    print(DEFAULT_COLOR)
+    #print(DEFAULT_COLOR)
     for y in range( height ):
         row = []
         screen.append( row )
