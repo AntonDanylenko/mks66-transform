@@ -11,13 +11,13 @@ BLUE = 2
 
 DEFAULT_COLOR = [0, 0, 0]
 
-def new_screen( width = XRES, height = YRES ):
+def new_screen( width = XRES, height = YRES, background = DEFAULT_COLOR):
     screen = []
     for y in range( height ):
         row = []
         screen.append( row )
         for x in range( width ):
-            screen[y].append( DEFAULT_COLOR[:] )
+            screen[y].append( background[:] )
     return screen
 
 def plot( screen, color, x, y ):
@@ -57,4 +57,3 @@ def display( screen ):
     p = Popen( ['display', ppm_name], stdin=PIPE, stdout = PIPE )
     p.communicate()
     remove(ppm_name)
-

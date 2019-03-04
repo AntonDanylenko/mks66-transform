@@ -39,10 +39,10 @@ def parse_file( fname, points, transform, screen, color ):
     i = 0
     while i<len(lines):
         #print("len(lines): " + str(len(lines)))
-        print("line: " + str(i))
-        print("command: " + lines[i])
+        #print("line: " + str(i))
+        #print("command: " + lines[i])
         if (lines[i]=="line"):
-            print("args: " + lines[i+1])
+            #print("args: " + lines[i+1])
             args = lines[i+1].split(" ")
             add_edge(points, int(args[0]), int(args[1]), int(args[2]), int(args[3]), int(args[4]), int(args[5]))
             i+=2
@@ -50,17 +50,17 @@ def parse_file( fname, points, transform, screen, color ):
             ident(transform)
             i+=1
         elif (lines[i]=="scale"):
-            print("args: " + lines[i+1])
+            #print("args: " + lines[i+1])
             args = lines[i+1].split(" ")
-            matrix_mult(make_scale(int(args[0]), int(args[1]), int(args[2])), transform)
+            matrix_mult(make_scale(float(args[0]), float(args[1]), float(args[2])), transform)
             i+=2
         elif (lines[i]=="translate"):
-            print("args: " + lines[i+1])
+            #print("args: " + lines[i+1])
             args = lines[i+1].split(" ")
             matrix_mult(make_translate(int(args[0]), int(args[1]), int(args[2])), transform)
             i+=2
         elif (lines[i]=="rotate"):
-            print("args: " + lines[i+1])
+            #print("args: " + lines[i+1])
             args = lines[i+1].split(" ")
             if (args[0]=="x"):
                 matrix_mult(make_rotX(int(args[1])), transform)
@@ -82,7 +82,7 @@ def parse_file( fname, points, transform, screen, color ):
             display(screen)
             i+=1
         elif (lines[i]=="save"):
-            print("args: " + lines[i+1])
+            #print("args: " + lines[i+1])
             args = lines[i+1].split(" ")
             clear_screen(screen)
             draw_lines(points, screen, color)
