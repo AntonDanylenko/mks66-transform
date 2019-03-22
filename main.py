@@ -8,9 +8,9 @@ color = [ 0, 255, 0 ]
 edges = []
 transform = new_matrix()
 
-#parse_file( 'script', edges, transform, screen, color )
+parse_file( 'script', edges, transform, screen, color )
 
-screen2 = new_screen()
+'''screen2 = new_screen()
 yellow = [255, 203, 76]
 orange = [241, 144, 32]
 brown = [101, 71, 27]
@@ -27,4 +27,4 @@ add_multi(curves, "208,221 204,217 202,211 204,204 209,200 215,198 224,200 237,2
 
 parse_file('script2', curves, transform2, screen2, brown)
 parse_file('script2', face, transform2, screen2, yellow)
-parse_file('script2', hand, transform2, screen2, orange)
+parse_file('script2', hand, transform2, screen2, orange)'''
